@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MDN loops exercises</title>
+
+</head>
+<body>
+
+  <script>
+    
+    /* Loop from 10 down to 0. 
+    for (let i = 10; i >= 0; i--) {
+      if (i == 10) {
+        console.log("Countdown 10")
+      } else if (i == 0) {
+        console.log("Blast off!")
+      } else {
+        console.log(i);
+      }
+    } */
+
+    /* In this exercise, we want you to take a list of names stored in an array 
+    and put them into a guest list. But it's not quite that easy — we don't 
+    want to let Phil and Lola in */
+
+    const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+    const admitted = [];
+    const refused = [];
+
+    for (const guest of people) {
+      if (guest === "Phil" || guest === "Lola") {
+        refused.push(guest);
+      } else {
+        admitted.push(guest);
+      }
+    }
+
+    console.log(`Admitted: ${admitted}`);
+    console.log(`Refused: ${refused}`);
+
+    
+  </script>
+</body>
+</html>
