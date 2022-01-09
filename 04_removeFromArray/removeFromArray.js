@@ -1,6 +1,14 @@
-const removeFromArray = function() {
+const removeFromArray = function(...args) {
+  // Store the first argument (which is an array) into the array variable
+  const array = args[0] // e.g. for removeFromArray([1, 2, 3, 4], 3, 4) array = [1, 2, 3, 4]
 
-};
+  return array.filter(value => !args.includes(value))
+  //  [1, 2, 3, 4].filter (
+  // 1 => ![[1,2,3,4], 3, 4].includes(1) !NO => TRUE => Gets filtered onto the new list
+	// 2 => ![[1,2,3,4], 3, 4].includes(2) !NO => TRUE => Gets filtered onto the new list
+	// 3 => ![[1,2,3,4], 3, 4].includes(3) !YES => FALSE => Not included in the filtered array
+	// 4 => ![[1,2,3,4], 3, 4].includes(4) !YES => FALSE => Not included in the filtered array
+}
 
 // Do not edit below this line
 module.exports = removeFromArray;
