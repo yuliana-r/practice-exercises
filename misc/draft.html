@@ -9,35 +9,15 @@
 
   <script>
 
-function sumAll(num1, num2) {
+const ftoc = function(tF) {
+  let tC = (tF - 32) * (5/9);
+  return Math.round(tC * 100) / 100;
+};
 
-let sum = 0;
-
-if (num1 < num2) {
-    for (i = num1; i <= num2; i++) {
-        sum += i;
-    }
-    return sum;
-
-} else if (num1 > num2) {
-    for (i = num2; i <= num1; i++) {
-        sum += i;
-    }
-    return sum;
-
-} else if (num1 < 0 || num2 < 0) {
-    return ("ERROR");
-    
-} else {
-    return ("ERROR");
-}
-
-}
-
-  
-
-
-sumAll(123, 1)
+const ctof = function(tC) {
+  let tF = tC * (9/5) + 32;
+  return Math.round(tF * 100) / 100;
+};
   </script>
 </body>
 </html>
