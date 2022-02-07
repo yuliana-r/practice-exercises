@@ -8,62 +8,80 @@
 </head>
 
 <body>
+  <p>This example requires you to enter commands in your browser's JavaScript console (see <a
+      href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are
+      browser developer tools</a> for more information).</p>
 
-  <script>
-    // Write the code, one line for each action:
-    //     let user = {};
-    //     user.name = "John";
-    //     user.surname = "Smith";
-    //     user.name = "Pete";
-    //     delete user.name;
-
-    // Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
-
-    // let obj = {};
-
-    // function isEmpty(obj) {
-    //   for (let key in obj) {
-    //     return false;
-    //   }
-    //   return true;
-    // }
-
-    // Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
-    // If salaries is empty, then the result must be 0.
-
-    // let salaries = {
-    //   John: 100,
-    //   Ann: 160,
-    //   Pete: 130
-    // }
-
-    // let sum = 0;
-
-    // for (let key in salaries) {
-    //   sum += + salaries[key];
-    // }
-
-    // console.log(sum);
-
-    //Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
-
-    // let menu = {
-    //   width: 200,
-    //   height: 300,
-    //   title: "My menu"
-    // };
-
-    // multiplyNumeric(menu);
-
-    // function multiplyNumeric(object) {
-    //   for (let key in object) {
-    //     if (typeof object[key] == "number") {
-    //       object[key] *= 2;
-    //     }
-    //   }
-    //   console.log(object);
-    // }
-  </script>
 </body>
+<script>
+  const person = {
+    name: ['Bob', 'Smith'],
+    age: 32,
+    bio() {
+      console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    },
+    introduceSelf() {
+      console.log(`Hi! I'm ${this.name[0]}.`);
+    }
+  };
+
+
+
+
+  // JAVASCRIPT.INFO
+  // Write the code, one line for each action:
+  //     let user = {};
+  //     user.name = "John";
+  //     user.surname = "Smith";
+  //     user.name = "Pete";
+  //     delete user.name;
+
+  // Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
+
+  // let obj = {};
+
+  // function isEmpty(obj) {
+  //   for (let key in obj) {
+  //     return false;
+  //   }
+  //   return true;
+  // }
+
+  // Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+  // If salaries is empty, then the result must be 0.
+
+  // let salaries = {
+  //   John: 100,
+  //   Ann: 160,
+  //   Pete: 130
+  // }
+
+  // let sum = 0;
+
+  // for (let key in salaries) {
+  //   sum += + salaries[key];
+  // }
+
+  // console.log(sum);
+
+  //Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+
+  // let menu = {
+  //   width: 200,
+  //   height: 300,
+  //   title: "My menu"
+  // };
+
+  // multiplyNumeric(menu);
+
+  // function multiplyNumeric(object) {
+  //   for (let key in object) {
+  //     if (typeof object[key] == "number") {
+  //       object[key] *= 2;
+  //     }
+  //   }
+  //   console.log(object);
+  // }
+</script>
 
 </html>
