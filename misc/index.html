@@ -1,117 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>My spending record</title>
-  <link href="minimal-table.css" rel="stylesheet" type="text/css">
-  <style>
-  </style>
+  <title>Draft</title>
 </head>
 
 <body>
 
   <style>
-    html {
-      font-family: sans-serif;
-    }
+    .container {
+  display: inline-grid;
+  grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+  background-color: lightblue; 
+  grid-template-areas:
+    "living-room living-room living-room living-room living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "closet closet bathroom kitchen kitchen"    
+}
 
-    table {
-      border-collapse: collapse;
-      border: 2px solid rgb(200, 200, 200);
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-    }
+.room {
+  border: 1px solid;
+  font-size: 50%;
+  text-align: center;
+}
 
-    td,
-    th {
-      border: 1px solid rgb(190, 190, 190);
-      padding: 10px 20px;
-    }
+#living-room {
+   grid-area:  living-room;
+}
 
-    th {
-      background-color: rgb(235, 235, 235);
-    }
+#kitchen {
+  grid-area: kitchen;
+}
 
-    td {
-      text-align: center;
-    }
+#bedroom {
+  grid-area: bedroom;
+}
 
-    tr:nth-child(even) td {
-      background-color: rgb(250, 250, 250);
-    }
+#bathroom {
+  grid-area: bathroom;
+}
 
-    tr:nth-child(odd) td {
-      background-color: rgb(245, 245, 245);
-    }
-
-    caption {
-      padding: 10px;
-    }
-
-    tbody {
-      font-size: 95%;
-      font-style: italic;
-    }
-
-    tfoot {
-      font-weight: bold;
-    }
+#closet {
+  grid-area: closet;
+}
   </style>
-  <h1>My spending record</h1>
-
-  <table>
-    <caption>How I chose to spend my money</caption>
-    <thead>
-      <tr>
-        <th>Purchase</th>
-        <th>Location</th>
-        <th>Date</th>
-        <th>Evaluation</th>
-        <th>Cost (€)</th>
-      </tr>
-    </thead>
-
-    <tfoot>
-      <tr>
-        <td colspan="4">SUM</td>
-        <td>118</td>
-      </tr>
-    </tfoot>
-
-    <tbody>
-      <tr>
-        <td>Haircut</td>
-        <td>Hairdresser</td>
-        <td>12/09</td>
-        <td>Great idea</td>
-        <td>30</td>
-      </tr>
-      <tr>
-        <td>Lasagna</td>
-        <td>Restaurant</td>
-        <td>12/09</td>
-        <td>Regrets</td>
-        <td>18</td>
-      </tr>
-      <tr>
-        <td>Shoes</td>
-        <td>Shoeshop</td>
-        <td>13/09</td>
-        <td>Big regrets</td>
-        <td>65</td>
-      </tr>
-      <tr>
-        <td>Toothpaste</td>
-        <td>Supermarket</td>
-        <td>13/09</td>
-        <td>Good</td>
-        <td>5</td>
-      </tr>
-    </tbody>
-
-  </table>
-
+  <div class="container">
+    <div class="room" id="living-room">Living Room</div>
+    <div class="room" id="kitchen">Kitchen</div>
+    <div class="room" id="bedroom">Bedroom</div>
+    <div class="room" id="bathroom">Bathroom</div>
+    <div class="room" id="closet">Closet</div>
+  </div>
 </body>
 
 </html>
