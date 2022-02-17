@@ -6,54 +6,45 @@
   <title>Draft</title>
 </head>
 
+<script>
+  // function Book(title, author, pages, status) {
+  //   this.title = title
+  //   this.author = author
+  //   this.pages = pages
+  //   this.status = status
+  //   this.info = function() {
+  //     return title + " by " + author + ", " + pages + " pages, " + status;
+  //   }
+  // }
+
+  // const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "295", "not read yet");
+
+  // console.log(theHobbit.info());
+  let head = {
+  glasses: 1
+};
+
+let table = {
+  pen: 3,
+  __proto__: head
+};
+
+let bed = {
+  sheet: 1,
+  pillow: 2,
+  __proto__: table
+};
+
+let pockets = {
+  money: 2000,
+  __proto__: bed
+};
+
+
+</script>
+
 <body>
 
-  <style>
-    .container {
-  display: inline-grid;
-  grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
-  background-color: lightblue; 
-  grid-template-areas:
-    "living-room living-room living-room living-room living-room"
-    "living-room living-room living-room living-room living-room"
-    "bedroom bedroom bathroom kitchen kitchen"
-    "bedroom bedroom bathroom kitchen kitchen"
-    "closet closet bathroom kitchen kitchen"    
-}
-
-.room {
-  border: 1px solid;
-  font-size: 50%;
-  text-align: center;
-}
-
-#living-room {
-   grid-area:  living-room;
-}
-
-#kitchen {
-  grid-area: kitchen;
-}
-
-#bedroom {
-  grid-area: bedroom;
-}
-
-#bathroom {
-  grid-area: bathroom;
-}
-
-#closet {
-  grid-area: closet;
-}
-  </style>
-  <div class="container">
-    <div class="room" id="living-room">Living Room</div>
-    <div class="room" id="kitchen">Kitchen</div>
-    <div class="room" id="bedroom">Bedroom</div>
-    <div class="room" id="bathroom">Bathroom</div>
-    <div class="room" id="closet">Closet</div>
-  </div>
 </body>
 
 </html>
