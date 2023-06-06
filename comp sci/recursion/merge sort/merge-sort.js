@@ -27,5 +27,3 @@ function merge(left, right) {
 
     return result.concat(left.slice(i)).concat(right.slice(j));
 }
-
-console.log(mergeSort([5,3,1,2,4,7,6]))

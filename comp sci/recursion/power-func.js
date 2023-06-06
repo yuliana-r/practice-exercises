@@ -4,5 +4,3 @@ function power(n, m) {
     }
     return n * power(n, m - 1);
 }
-
-console.log(power(2, 4))
