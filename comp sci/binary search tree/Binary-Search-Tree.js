@@ -1,13 +1,8 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-param-reassign */
 /* eslint-disable max-classes-per-file */
-class Node {
-  constructor(data = 'null') {
-    this.data = data;
-    this.right = null;
-    this.left = null;
-  }
-}
+
+const Node = require('./Node');
 
 class Tree {
   constructor(arr) {
@@ -215,17 +210,19 @@ class Tree {
     const values = this.inorder();
     this.root = this.buildTree(values);
   }
+
+  printTree(node = this.root, prefix = '', isLeft = true) {
+    if (node === null) {
+      return;
+    }
+    if (node.right !== null) {
+      this.printTree(node.right, `${prefix}${isLeft ? '│   ' : '    '}`, false);
+    }
+    console.log(`${prefix}${isLeft ? '└── ' : '┌── '}${node.data}`);
+    if (node.left !== null) {
+      this.printTree(node.left, `${prefix}${isLeft ? '    ' : '│   '}`, true);
+    }
+  }
 }
 
-const printTree = (node, prefix = '', isLeft = true) => {
-  if (node === null) {
-    return;
-  }
-  if (node.right !== null) {
-    printTree(node.right, `${prefix}${isLeft ? '│   ' : '    '}`, false);
-  }
-  console.log(`${prefix}${isLeft ? '└── ' : '┌── '}${node.data}`);
-  if (node.left !== null) {
-    printTree(node.left, `${prefix}${isLeft ? '    ' : '│   '}`, true);
-  }
-};
+module.exports = Tree;
