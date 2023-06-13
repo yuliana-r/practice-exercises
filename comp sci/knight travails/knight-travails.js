@@ -1,4 +1,19 @@
 /* eslint-disable import/prefer-default-export */
+const knightMoves = [
+  [1, 2], [-1, 2],
+  [2, 1], [-2, 1],
+  [-2, -1], [2, -1],
+  [-1, -2], [1, -2],
+];
+
+const q = [];
+const visited = [];
+
+const Node = ([x, y]) => {
+  const node = { position: `[${x}, ${y}]`, prev: null };
+  return node;
+};
+
 function createBoard() {
   const board = [];
 
@@ -10,13 +25,6 @@ function createBoard() {
 
   return board;
 }
-
-const knightMoves = [
-  [1, 2], [-1, 2],
-  [2, 1], [-2, 1],
-  [-2, -1], [2, -1],
-  [-1, -2], [1, -2],
-];
 
 function createAdjacencyList(board, knightMoves) {
   const graph = {};
