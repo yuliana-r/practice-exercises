@@ -2,7 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable max-classes-per-file */
 
-const Node = require('./Node');
+const Node = require("./Node");
 
 class Tree {
   constructor(arr) {
@@ -31,7 +31,7 @@ class Tree {
   }
 
   insert(value, node = this.root) {
-    if (this.find(value) !== null) return 'Value already exists.';
+    if (this.find(value) !== null) return "Value already exists.";
 
     if (node === null) return new Node(value);
 
@@ -45,7 +45,7 @@ class Tree {
   }
 
   delete(value, node = this.root) {
-    if (this.find(value) === null) return 'Value does not exist.';
+    if (this.find(value) === null) return "Value does not exist.";
 
     if (node === null) return node;
 
@@ -56,7 +56,8 @@ class Tree {
     } else {
       if (node.left === null) {
         return node.right;
-      } if (node.right === null) {
+      }
+      if (node.right === null) {
         return node.left;
       }
 
@@ -211,16 +212,16 @@ class Tree {
     this.root = this.buildTree(values);
   }
 
-  printTree(node = this.root, prefix = '', isLeft = true) {
+  printTree(node = this.root, prefix = "", isLeft = true) {
     if (node === null) {
       return;
     }
     if (node.right !== null) {
-      this.printTree(node.right, `${prefix}${isLeft ? '│   ' : '    '}`, false);
+      this.printTree(node.right, `${prefix}${isLeft ? "│   " : "    "}`, false);
     }
-    console.log(`${prefix}${isLeft ? '└── ' : '┌── '}${node.data}`);
+    console.log(`${prefix}${isLeft ? "└── " : "┌── "}${node.data}`);
     if (node.left !== null) {
-      this.printTree(node.left, `${prefix}${isLeft ? '    ' : '│   '}`, true);
+      this.printTree(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
     }
   }
 }

@@ -1,9 +1,13 @@
 /* eslint-disable consistent-return */
 const knightMoves = [
-  [1, 2], [-1, 2],
-  [2, 1], [-2, 1],
-  [-2, -1], [2, -1],
-  [-1, -2], [1, -2],
+  [1, 2],
+  [-1, 2],
+  [2, 1],
+  [-2, 1],
+  [-2, -1],
+  [2, -1],
+  [-1, -2],
+  [1, -2],
 ];
 
 const Node = ([x, y]) => {
@@ -63,16 +67,16 @@ function breadthFirstSearch(start, target) {
 
 const findShortestPath = (start, end) => {
   if (
-    !start.every((coord) => coord >= 1 && coord <= 8)
-        || !end.every((coord) => coord >= 1 && coord <= 8)
+    !start.every((coord) => coord >= 1 && coord <= 8) ||
+    !end.every((coord) => coord >= 1 && coord <= 8)
   ) {
-    return 'Please enter start and end points between [1, 1] and [8, 8].';
+    return "Please enter start and end points between [1, 1] and [8, 8].";
   }
 
   const path = breadthFirstSearch(start, end);
 
   if (path === null) {
-    return 'No path found.';
+    return "No path found.";
   }
 
   const output = [];

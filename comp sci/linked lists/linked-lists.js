@@ -3,25 +3,25 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
 class Node {
-  constructor(value = 'null', next = 'null') {
+  constructor(value = "null", next = "null") {
     this.value = value;
     this.next = next;
   }
 }
 
 class LinkedList {
-  constructor(head = 'null') {
+  constructor(head = "null") {
     this.head = new Node(head);
   }
 
   append(value) {
     const newNode = new Node(value);
 
-    if (this.head.value === 'null') {
+    if (this.head.value === "null") {
       this.head = newNode;
     } else {
       let currentNode = this.head;
-      while (currentNode.next !== 'null') {
+      while (currentNode.next !== "null") {
         currentNode = currentNode.next;
       }
       currentNode.next = newNode;
@@ -43,7 +43,7 @@ class LinkedList {
     let currentNode = this.head;
     let counter = 0;
 
-    while (currentNode !== 'null') {
+    while (currentNode !== "null") {
       currentNode = currentNode.next;
       counter++;
     }
@@ -57,14 +57,15 @@ class LinkedList {
   tail() {
     let currentNode = this.head;
 
-    while (currentNode.next !== 'null') {
+    while (currentNode.next !== "null") {
       currentNode = currentNode.next;
     }
     return currentNode;
   }
 
   nodeAt(index) {
-    if (this.size() <= index) return `${index} is beyond the size of this linked list.`;
+    if (this.size() <= index)
+      return `${index} is beyond the size of this linked list.`;
 
     let currentNode = this.head;
     let counter = 0;
@@ -79,7 +80,7 @@ class LinkedList {
   pop() {
     let previousNode;
     let currentNode = this.head;
-    while (currentNode.next !== 'null') {
+    while (currentNode.next !== "null") {
       previousNode = currentNode;
       currentNode = currentNode.next;
     }
@@ -88,7 +89,7 @@ class LinkedList {
 
   contains(value) {
     let currentNode = this.head;
-    while (currentNode !== 'null') {
+    while (currentNode !== "null") {
       if (currentNode.value === value) {
         return true;
       }
@@ -112,17 +113,18 @@ class LinkedList {
 
   toString() {
     let currentNode = this.head;
-    let string = '';
-    while (currentNode !== 'null') {
+    let string = "";
+    while (currentNode !== "null") {
       string += `( ${currentNode.value} ) -> `;
       currentNode = currentNode.next;
     }
-    string += 'null';
+    string += "null";
     return string;
   }
 
   insertAt(value, index) {
-    if (this.size() <= index) return `${index} is beyond the size of this linked list.`;
+    if (this.size() <= index)
+      return `${index} is beyond the size of this linked list.`;
 
     const tempNode = new Node(null, this.nodeAt(index));
     const newNode = new Node(value);
@@ -133,7 +135,8 @@ class LinkedList {
   }
 
   removeAt(index) {
-    if (this.size() <= index) return `${index} is beyond the size of this linked list.`;
+    if (this.size() <= index)
+      return `${index} is beyond the size of this linked list.`;
 
     const previousNode = this.nodeAt(index - 1);
     const nodeToRemove = previousNode.next;

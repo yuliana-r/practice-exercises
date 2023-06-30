@@ -1,4 +1,4 @@
-const Tree = require('./Binary-Search-Tree');
+const Tree = require("./Binary-Search-Tree");
 
 function randomArr(size) {
   return Array.from({ length: size }, () => Math.floor(Math.random() * 100));
